@@ -11,7 +11,6 @@ Key features include:
 - 
 Built and tested on XAMPP, this system simplifies waste collection, encourages recycling, and provides insights, making it an efficient tool for communities and organizations.
 
-plaintext
 ### Step 1: Download and Install XAMPP
 1. Go to the official XAMPP website: https://www.apachefriends.org.
 2. Download the version compatible with your operating system (Windows, macOS, or Linux).
@@ -48,8 +47,7 @@ plaintext
    if ($conn->connect_error) {
        die("Connection failed: " . $conn->connect_error);
    }
-   ?>
-   
+   ?>  
 
 ### Step 5: Access the Project
 1. Open a browser and enter:
@@ -61,5 +59,3 @@ plaintext
 2. On another device, enter:
    http://<device_ip>/waste-management-system-main/
 
-
-You can copy the text above and use it for setting up your project!
