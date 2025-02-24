@@ -33,21 +33,18 @@ Built and tested on XAMPP, this system simplifies waste collection, encourages r
 1. Open the project folder (waste-management-system-main) in a text editor.
 2. Locate the connection.php file.
 3. Update the database credentials to match the wms database:
-   php
-   <?php
-   $host = 'localhost';
-   $dbname = 'wms';
-   $username = 'root'; // Default XAMPP username
-   $password = ''; // Default XAMPP password
 
-   // Create connection
-   $conn = new mysqli($host, $username, $password, $dbname);
+<?php
 
-   // Check connection
-   if ($conn->connect_error) {
-       die("Connection failed: " . $conn->connect_error);
-   }
-   ?>  
+$host = 'localhost';
+$dbname = 'wms';
+$username = 'root'; // Default XAMPP username
+$password = ''; // Default XAMPP password
+
+// Create connection
+$conn = new mysqli($host, $username, $password, $dbname);
+
+?>  
 
 ### Step 5: Access the Project
 1. Open a browser and enter:
