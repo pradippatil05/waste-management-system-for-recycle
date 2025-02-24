@@ -34,17 +34,10 @@ Built and tested on XAMPP, this system simplifies waste collection, encourages r
 2. Locate the connection.php file.
 3. Update the database credentials to match the wms database:
 
-<?php
-
 $host = 'localhost';
 $dbname = 'wms';
 $username = 'root'; // Default XAMPP username
 $password = ''; // Default XAMPP password
-
-// Create connection
-$conn = new mysqli($host, $username, $password, $dbname);
-
-?>  
 
 ### Step 5: Access the Project
 1. Open a browser and enter:
