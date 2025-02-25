@@ -19,7 +19,6 @@ Built and tested on XAMPP, this system simplifies waste collection, encourages r
 5. Open the XAMPP Control Panel and start Apache and MySQL.
 
 ### Step 2: Download the Project
-(Download and extract the zip file)
 1. Obtain the project files (the folder should be named waste-management-system-main).
 2. Place the project folder inside the XAMPP htdocs directory:
    - Windows: C:\xampp\htdocs\
