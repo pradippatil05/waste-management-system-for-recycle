@@ -1,0 +1,88 @@
+<?php require_once "controllerUserData.php"; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4 form">
+                <form action="center-signup.php" method="POST" autocomplete="">
+                    <h2 class="text-center">Signup Form</h2>
+                    <p class="text-center">It's quick and easy.</p>
+                    <?php
+                    if(count($errors) == 1){
+                        ?>
+                        <div class="alert alert-danger text-center">
+                            <?php
+                            foreach($errors as $showerror){
+                                echo $showerror;
+                            }
+                            ?>
+                        </div>
+                        <?php
+                    }elseif(count($errors) > 1){
+                        ?>
+                        <div class="alert alert-danger">
+                            <?php
+                            foreach($errors as $showerror){
+                                ?>
+                                <li><?php echo $showerror; ?></li>
+                                <?php
+                            }
+                            ?>
+                        </div>
+                        <?php
+                    }
+                    ?>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="name" placeholder="center Name" required value="<?php echo $name ?>">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="int" name="contactno" placeholder="Contact No" required value="<?php echo $contactno ?>">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="email" name="email" placeholder="Email Address" required value="<?php echo $email ?>">
+                    </div>
+                    <div class="form-group" id="workingon">
+                            <label for="Workingon">Working on</label>
+                            <select class="form-control" id="Workingon" name="workingon[]" required>
+                                <option value="">Select Working on Type</option>
+                                <option value="organic">Organic Waste</option>
+                                <option value="plastic">Plastic Waste</option>
+                                <option value="paper">Paper Waste</option>
+                                <option value="electronics">Electronics Waste</option>
+                                <option value="hazardous">Hazardous Waste</option>
+                                <option value="medical">Medical Waste</option>
+                                <!-- Add more options as needed -->
+                            </select>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="district" placeholder="district" required value="<?php echo $district ?>">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="taluka" placeholder="taluka" required value="<?php echo $taluka ?>">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="city" placeholder="city" required value="<?php echo $city ?>">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="password" name="cpassword" placeholder="Confirm password" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control button" type="submit" name="signup" value="Signup">
+                    </div>
+                    <div class="link login-link text-center">Already a member? <a href="center-login.php">Login here</a></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
